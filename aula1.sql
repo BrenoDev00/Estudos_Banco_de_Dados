@@ -28,3 +28,6 @@ SELECT
 	ship_city
 FROM orders
 LIMIT 5;
+
+-- O comando DISTINCT é utilizado para filtrar valores distintos que não se repetem.
+SELECT DISTINCT contact_title FROM customers;
