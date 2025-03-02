@@ -30,3 +30,16 @@ WHERE contact_title = 'Owner' AND country = 'France';
 
 SELECT * FROM customers
 WHERE country = 'France' OR country = 'Mexico';
+
+
+-- WHERE + LIKE permite criar filtros especiais de textos.
+SELECT * FROM products
+WHERE quantity_per_unit LIKE '%boxes%'; -- É preciso usar a palavra dentro de %%.
+
+SELECT * FROM products
+WHERE quantity_per_unit LIKE '%jars%';
+
+
+-- WHERE + IN é uma alternativa ao uso de múltiplos or.
+SELECT * FROM customers
+WHERE country IN ('Mexico', 'UK', 'Canada');
