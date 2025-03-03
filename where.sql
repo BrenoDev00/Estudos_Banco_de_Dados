@@ -43,3 +43,11 @@ WHERE quantity_per_unit LIKE '%jars%';
 -- WHERE + IN é uma alternativa ao uso de múltiplos or.
 SELECT * FROM customers
 WHERE country IN ('Mexico', 'UK', 'Canada');
+
+
+-- WHERE + BETWEEN é uma alternativa para ao uso do and para filtrar intervalos de números e datas.
+SELECT * FROM products
+WHERE unit_price BETWEEN 50 AND 100;
+
+SELECT * FROM orders
+WHERE order_date BETWEEN '1997-01-01' AND '1997-12-31';
