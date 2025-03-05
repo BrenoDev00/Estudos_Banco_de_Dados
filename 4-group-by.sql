@@ -32,3 +32,21 @@ SELECT
 	COUNT(*)
 FROM customers
 GROUP BY contact_title;
+
+
+-- Utilizando o WHERE com GROUP BY.
+SELECT 
+	country,
+	COUNT(*)
+FROM customers
+WHERE contact_title = 'Owner'
+GROUP BY country;
+
+
+-- Utilizando o HAVING com GROUP BY.
+SELECT 
+	country,
+	COUNT(*)
+FROM customers
+GROUP BY country
+HAVING COUNT(*) > 10;
