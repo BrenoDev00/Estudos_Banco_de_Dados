@@ -57,3 +57,14 @@ WHERE ID_Curso = 1;
 UPDATE alunos
 SET Nome_Aluno = 'Eliane', Email = 'eliane@mail.com'
 WHERE ID_Aluno = 3;
+
+
+SELECT * FROM matriculas;
+
+DELETE FROM matriculas
+WHERE ID_Matricula = 2;
+
+DELETE FROM matriculas
+WHERE ID_Matricula = 1;
+
+TRUNCATE TABLE matriculas;
