@@ -48,4 +48,12 @@ VALUES
 	(2, 1, 1, '2025/03/11'),
 	(3, 2, 3, '2025/01/05');
 
-SELECT * FROM matriculas;
+SELECT * FROM alunos;
+
+UPDATE cursos
+SET Preco_Curso = 200
+WHERE ID_Curso = 1;
+
+UPDATE alunos
+SET Nome_Aluno = 'Eliane', Email = 'eliane@mail.com'
+WHERE ID_Aluno = 3;
