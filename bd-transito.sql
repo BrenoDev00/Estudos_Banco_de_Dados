@@ -81,3 +81,5 @@ BEGIN TRANSACTION;
 
 ALTER TABLE purchases
 ALTER COLUMN purchase_date TYPE TIMESTAMP;
+
+-- commit;
