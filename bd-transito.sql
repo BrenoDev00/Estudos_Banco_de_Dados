@@ -75,4 +75,9 @@ CREATE TABLE IF NOT EXISTS public.purchases (
 	FOREIGN KEY(user_id) REFERENCES users(user_id)
 );
 
-SELECT * FROM users;
+SELECT * FROM purchases;
+
+BEGIN TRANSACTION;
+
+ALTER TABLE purchases
+ALTER COLUMN purchase_date TYPE TIMESTAMP;
