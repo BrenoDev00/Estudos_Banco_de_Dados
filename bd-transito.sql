@@ -58,3 +58,21 @@ WHERE id_carro = 1;
 
 DELETE FROM carro
 WHERE id_carro = 2;
+
+
+CREATE TABLE IF NOT EXISTS public.users (
+	user_id SERIAL,
+	name VARCHAR(20) NOT NULL,
+	surname VARCHAR(30) NOT NULL,
+	PRIMARY KEY(user_id)
+);
+
+CREATE TABLE IF NOT EXISTS public.purchases (
+	purchase_id SERIAL,
+	purchase_date DATE NOT NULL, 
+	user_id INTEGER NOT NULL,
+	PRIMARY KEY(purchase_id),
+	FOREIGN KEY(user_id) REFERENCES users(user_id)
+);
+
+SELECT * FROM users;
