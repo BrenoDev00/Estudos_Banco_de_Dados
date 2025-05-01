@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS public.task (
 	task_id UUID DEFAULT gen_random_uuid(),
 	task VARCHAR(300) NOT NULL,
 	is_public BOOLEAN NOT NULL,
-	created_at TIMESTAMP NOT NULL,
+	created_at TIMESTAMP NOT NULL ,
 	user_email TEXT NOT NULL,
 	PRIMARY KEY(task_id)
 );
