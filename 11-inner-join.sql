@@ -25,5 +25,24 @@ FROM public.order_details
 INNER JOIN public.products
 ON order_details.product_id = products.product_id;
 
+-- inner join com where:
 
+SELECT
+	products.product_name,
+	products.unit_price,
+	order_details.quantity,
+	order_details.discount
+FROM public.order_details
+INNER JOIN public.products
+	ON order_details.product_id = products.product_id
+	WHERE products.unit_price > 30;
 
+-- inner join com group by:
+
+SELECT
+	products.product_name,
+	SUM(order_details.quantity)
+FROM public.order_details
+INNER JOIN public.products
+	ON order_details.product_id = products.product_id
+GROUP BY product_name;
