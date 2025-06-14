@@ -22,7 +22,7 @@ SELECT
 	products.product_name,
 	products.unit_price
 FROM public.order_details
-INNER JOIN public.products
+FULL JOIN public.products
 ON order_details.product_id = products.product_id;
 
 -- inner join com where:
@@ -46,3 +46,29 @@ FROM public.order_details
 INNER JOIN public.products
 	ON order_details.product_id = products.product_id
 GROUP BY product_name;
+
+
+
+
+SELECT 
+	products.product_id,
+	products.product_name,
+	products.unit_price,
+	categories.category_name,
+	products.category_id
+FROM public.products
+INNER JOIN public.categories
+ON products.category_id = categories.category_id;
+
+
+select unit_price from products;
+
+SELECT 
+	products.product_name,
+	SUM(order_details.quantity)
+FROM public.order_details
+RIGHT JOIN public.products
+ON order_details.product_id = products.product_id
+WHERE products.unit_price > 80
+GROUP BY products.product_name
+ORDER BY SUM(order_details.quantity) DESC;
